@@ -5,9 +5,9 @@ import requests
 from pavilion_cms.utils import handle_errors, handle_api_list_response
 
 
-# BASE_URL = "https://api.pavilioncms.com/api/v1"
+BASE_URL = "https://api.pavilioncms.com/api/v1"
 
-BASE_URL = "http://localhost:8000/api/v1"
+# BASE_URL = "http://localhost:8000/api/v1"
 
 
 class PavilionCMS:
