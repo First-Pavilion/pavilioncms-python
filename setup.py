@@ -57,7 +57,7 @@ setup(
     long_description_content_type='text/markdown',
     include_package_data=True,
     name=NAME,
-    packages=find_packages(include=['pavilion_cms', 'pavilion_cms.*'], exclude=["tests", "_example"]),
+    packages=find_packages(exclude=["tests", "_example"]),
     test_suite='tests',
     tests_require=test_requirements,
     version=VERSION,

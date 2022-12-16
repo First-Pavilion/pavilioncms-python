@@ -26,6 +26,10 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
+
+lint-black:
+	black pavilion_cms tests
+
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
 
 clean-build: ## remove build artifacts
@@ -53,6 +57,7 @@ lint/black: ## check style with black
 	black --check pavilion_cms tests
 
 lint: lint/flake8 lint/black ## check style
+
 
 test: ## run tests quickly with the default Python
 	pytest

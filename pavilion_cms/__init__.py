@@ -1,6 +1,6 @@
 """Top-level package for PavilionCMS ."""
 
-from pavilion_cms.pavilion_cms import PavilionCMS  # noqa: F401
+from pavilion_cms.client import PavilionCMS  # noqa: F401
 
 __author__ = """Oluwole Majiyagbe"""
 __email__ = "info@firstpavitech.com"
