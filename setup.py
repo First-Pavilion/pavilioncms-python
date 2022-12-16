@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 from pavilion_cms import __version__, __author__, __email__
 
 
-NAME = "pavilioncms"
+NAME = "pavilioncms-python"
 DESCRIPTION = "Python Package to make use of PavilionCMS"
 EMAIL = __email__
 AUTHOR = __author__
