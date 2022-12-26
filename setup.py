@@ -5,7 +5,8 @@ import os
 import io
 from setuptools import setup, find_packages
 
-from pavilion_cms import __version__, __author__, __email__
+from pavilion_cms import __author__, __email__
+from pavilion_cms.__version__ import __version__
 
 
 NAME = "pavilioncms-python"
