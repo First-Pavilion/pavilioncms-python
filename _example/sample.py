@@ -1,14 +1,17 @@
 from pavilion_cms import PavilionCMS
 
-pavilioncms = PavilionCMS(read_token="04d9f9e9db9241ac86b29cbe9289bb6a")
+client = PavilionCMS(read_token="04d9f9e9db9241ac86b29cbe9289bb6a")
 
-all_tags = pavilioncms.get_all_tags()
+response = client.tags.all()
+import pdb; pdb.set_trace()
 
-assert all_tags
+# all_tags = pavilioncms.get_all_tags()
 
-print(all_tags)
+# assert all_tags
 
-single_id = all_tags["results"][0]["id"]
+# print(all_tags)
 
-single_tag = pavilioncms.get_tag(tag_id=single_id)
-print(single_tag)
+# single_id = all_tags["results"][0]["id"]
+
+# single_tag = pavilioncms.get_tag(tag_id=single_id)
+# print(single_tag)

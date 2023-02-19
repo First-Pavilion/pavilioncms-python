@@ -2,8 +2,6 @@
 
 """Tests for `pavilion_cms` package."""
 
-import requests
-
 # from pavilion_cms import pavilion_cms
 from pavilion_cms import PavilionCMS
 
@@ -25,7 +23,9 @@ def test_get_all_tags(mocker):
 def test_get_single_tag(mocker):
     client = PavilionCMS("test_token")
 
-    mocker.patch("pavilion_cms.client.Client.make_single_request", return_value=ALL_TAGS["results"][0]
+    mocker.patch(
+        "pavilion_cms.client.Client.make_single_request",
+        return_value=ALL_TAGS["results"][0],
     )
 
     resp = client.tags.get(ALL_TAGS["results"][0]["id"])
@@ -35,10 +35,11 @@ def test_get_single_tag(mocker):
     assert resp["name"] == ALL_TAGS["results"][0]["name"]
 
 
-
 def test_get_all_categories(mocker):
     client = PavilionCMS("test_token")
-    mocker.patch("pavilion_cms.client.Client.make_list_request", return_value=ALL_CATEGORIES)
+    mocker.patch(
+        "pavilion_cms.client.Client.make_list_request", return_value=ALL_CATEGORIES
+    )
 
     resp = client.category.all()
 
@@ -52,7 +53,9 @@ def test_get_all_categories(mocker):
 def test_get_single_category(mocker):
     client = PavilionCMS("test_token")
 
-    mocker.patch("pavilion_cms.client.Client.make_single_request", return_value=ALL_CATEGORIES["results"][0]
+    mocker.patch(
+        "pavilion_cms.client.Client.make_single_request",
+        return_value=ALL_CATEGORIES["results"][0],
     )
 
     resp = client.category.get(ALL_CATEGORIES["results"][0]["id"])

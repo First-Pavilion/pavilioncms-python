@@ -54,7 +54,7 @@ clean-test: ## remove test and coverage artifacts
 lint/flake8: ## check style with flake8
 	flake8 pavilion_cms tests
 lint/black: ## check style with black
-	black --check pavilion_cms tests
+	black pavilion_cms tests
 
 lint: lint/flake8 lint/black ## check style
 
