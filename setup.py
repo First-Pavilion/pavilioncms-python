@@ -22,16 +22,13 @@ REQUIRED = [
 
 base_dir = os.path.abspath(os.path.dirname(__file__))
 
-try:
-    with open('README.rst') as readme_file:
-        readme = readme_file.read()
+with open('README.md') as readme_file:
+    readme = readme_file.read()
 
-    with open('HISTORY.rst') as history_file:
-        history = history_file.read()
-    
-    long_description = f"{readme} \n\n {history}"
-except FileNotFoundError:
-    long_description = DESCRIPTION
+with open('HISTORY.rst') as history_file:
+    history = history_file.read()
+
+long_description = f"{readme} \n\n {history}"
 
 test_requirements = REQUIRED + ['pytest>=3', ]
 

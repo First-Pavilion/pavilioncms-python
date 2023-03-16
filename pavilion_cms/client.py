@@ -6,9 +6,7 @@ from pavilion_cms.utils import handle_errors
 from pavilion_cms.__version__ import __version__
 
 
-# BASE_URL = "https://api.pavilioncms.com/api/v1"
-
-BASE_URL = "http://localhost:8000/api/v1"
+BASE_URL = "https://api.v1.pavilioncms.com/"
 
 
 class Client(object):
